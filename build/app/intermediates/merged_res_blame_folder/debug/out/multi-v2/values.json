@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/anukanttechnologies/Developer/apps/tiktok/tiktok/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/anukanttechnologies/Developer/apps/tiktok/TikTok-1/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/Users/anukanttechnologies/.gradle/caches/transforms-3/5e083c06c9925c2309f02468fc66e376/transformed/core-1.7.0/res/values/values.xml",
@@ -42,6 +42,25 @@
                     }
                 },
                 {
+                    "source": "/Users/anukanttechnologies/Developer/apps/tiktok/TikTok-1/android/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "173,818",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "476,982"
+                    },
+                    "to": {
+                        "startLines": "103,108",
+                        "startColumns": "4,4",
+                        "startOffsets": "6151,6459",
+                        "endLines": "107,110",
+                        "endColumns": "12,12",
+                        "endOffsets": "6454,6623"
+                    }
+                },
+                {
                     "source": "/Users/anukanttechnologies/.gradle/caches/transforms-3/b8bd4bcbe7320b31658631ac6733d805/transformed/jetified-exoplayer-core-2.18.5/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
@@ -73,25 +92,6 @@
                         "startOffsets": "5321",
                         "endColumns": "42",
                         "endOffsets": "5359"
-                    }
-                },
-                {
-                    "source": "/Users/anukanttechnologies/Developer/apps/tiktok/tiktok/android/app/src/main/res/values/styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "173,818",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "476,982"
-                    },
-                    "to": {
-                        "startLines": "103,108",
-                        "startColumns": "4,4",
-                        "startOffsets": "6151,6459",
-                        "endLines": "107,110",
-                        "endColumns": "12,12",
-                        "endOffsets": "6454,6623"
                     }
                 }
             ]

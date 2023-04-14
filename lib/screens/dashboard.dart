@@ -94,7 +94,12 @@ class _DashboardState extends State<Dashboard> {
         child: Row(
       mainAxisSize: MainAxisSize.max,
       crossAxisAlignment: CrossAxisAlignment.end,
-      children: const [VideoDescription(), ActionsToolbar()],
+      children: const [
+        VideoDescription(),
+        ActionsToolbar(
+          isFollowing: false,
+        )
+      ],
     ));
   }
 }

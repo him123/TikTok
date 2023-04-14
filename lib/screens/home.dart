@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tiktok/cubit/home_tab/cubit/tabs_cubit.dart';
+import 'package:tiktok/screens/following_screen.dart';
+import 'package:tiktok/screens/for_you_page.dart';
 import 'package:tiktok/utils/colors.dart';
 import 'package:tiktok/widgets/actions_toolbar.dart';
 import 'package:tiktok/widgets/text.dart';
@@ -80,23 +82,11 @@ class _MyWidgetState extends State<Home> {
           },
         ),
       ),
-      body: PageView.builder(
-        itemCount: 5,
-        scrollDirection: Axis.vertical,
-        itemBuilder: (context, index) {
-          return Stack(
-            alignment: Alignment.bottomCenter,
-            children: [
-              VideoTile(),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: const [
-                  VideoDescription(),
-                  Expanded(child: ActionsToolbar())
-                ],
-              )
-            ],
-          );
+      body: BlocBuilder<TabsCubit, TabsState>(
+        builder: (context, state) {
+          return selectedIndex == 0
+              ? const FollowingPage()
+              : const ForYouPage();
         },
       ),
     );

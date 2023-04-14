@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/anukanttechnologies/Developer/apps/tiktok/tiktok/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-de/values-de.xml",
+            "outputFile": "/Users/anukanttechnologies/Developer/apps/tiktok/TikTok-1/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-de/values-de.xml",
             "map": [
                 {
                     "source": "/Users/anukanttechnologies/.gradle/caches/transforms-3/b8bd4bcbe7320b31658631ac6733d805/transformed/jetified-exoplayer-core-2.18.5/res/values-de/values-de.xml",

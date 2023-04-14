@@ -7,7 +7,8 @@ import 'package:tiktok/utils/size.dart';
 import 'package:tiktok/widgets/text.dart';
 
 class ActionsToolbar extends StatefulWidget {
-  const ActionsToolbar({super.key});
+  final bool isFollowing;
+  const ActionsToolbar({super.key, required this.isFollowing});
 
   @override
   State<ActionsToolbar> createState() => _ActionsToolbarState();
@@ -107,7 +108,10 @@ class _ActionsToolbarState extends State<ActionsToolbar>
       width: 60.0,
       height: 60.0,
       child: Stack(
-        children: [getProfilePicture(), getPlusIcon()],
+        children: [
+          getProfilePicture(),
+          widget.isFollowing ? const SizedBox() : getPlusIcon()
+        ],
       ),
     );
   }

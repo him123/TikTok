@@ -1,4 +1,4 @@
-#Fri Apr 14 16:43:03 IST 2023
-base.0=/Users/anukanttechnologies/Developer/apps/tiktok/tiktok/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+#Fri Apr 14 18:01:30 IST 2023
+base.0=/Users/anukanttechnologies/Developer/apps/tiktok/TikTok-1/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

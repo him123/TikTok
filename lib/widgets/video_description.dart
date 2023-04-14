@@ -1,6 +1,7 @@
 import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/material.dart';
 import 'package:marquee/marquee.dart';
+import 'package:tiktok/screens/album_page.dart';
 import 'package:tiktok/utils/colors.dart';
 import 'package:tiktok/widgets/text.dart';
 
@@ -52,19 +53,23 @@ class VideoDescription extends StatelessWidget {
                     size: 15.0,
                     color: ColorUtils.white,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 8,
                   ),
-                  SizedBox(
-                    height: 20,
-                    width: MediaQuery.of(context).size.width / 2,
-                    child: Marquee(
-                      text: 'audio name  .',
-                      velocity: 8,
-                      style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                            fontSize: 13,
-                            color: ColorUtils.white,
-                          ),
+                  InkWell(
+                    onTap: () => Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => const AlbumPage())),
+                    child: SizedBox(
+                      height: 20,
+                      width: MediaQuery.of(context).size.width / 2,
+                      child: Marquee(
+                        text: 'audio name  .',
+                        velocity: 8,
+                        style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                              fontSize: 13,
+                              color: ColorUtils.white,
+                            ),
+                      ),
                     ),
                   )
                 ],

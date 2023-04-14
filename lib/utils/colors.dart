@@ -6,4 +6,5 @@ class ColorUtils {
   static const white = Colors.white;
   static const grey = Colors.grey;
   static const blueAccent = Colors.blueAccent;
+  static const textGrey = Color(0xff86878B);
 }
