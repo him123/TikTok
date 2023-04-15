@@ -54,7 +54,7 @@ class _MyWidgetState extends State<Home> {
                         fontSize: isFollowingSelected ? 15 : 14,
                         color: isFollowingSelected
                             ? ColorUtils.white
-                            : ColorUtils.grey),
+                            : const Color.fromRGBO(255, 255, 255, 0.6)),
                   ),
                 ),
                 TextWidget(
@@ -74,7 +74,7 @@ class _MyWidgetState extends State<Home> {
                         fontSize: isFollowingSelected == false ? 15 : 14,
                         color: isFollowingSelected == false
                             ? ColorUtils.white
-                            : ColorUtils.grey),
+                            : const Color.fromRGBO(255, 255, 255, 0.6)),
                   ),
                 )
               ],

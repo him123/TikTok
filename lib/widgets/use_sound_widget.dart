@@ -13,7 +13,7 @@ class UseSoundWidget extends StatelessWidget {
         padding:
             EdgeInsets.only(bottom: MediaQuery.of(context).size.height * .05),
         child: Container(
-          width: MediaQuery.of(context).size.width * .4,
+          width: MediaQuery.of(context).size.width * .45,
           height: MediaQuery.of(context).size.height * .05,
           decoration: BoxDecoration(
               color: const Color(0xffEA4359),
@@ -25,8 +25,12 @@ class UseSoundWidget extends StatelessWidget {
               const SizedBox(
                 width: 5,
               ),
-              const TextWidget(
+              TextWidget(
                 text: 'Use this sound',
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyText1!
+                    .copyWith(fontSize: 16, fontWeight: FontWeight.w600),
               )
             ],
           ),

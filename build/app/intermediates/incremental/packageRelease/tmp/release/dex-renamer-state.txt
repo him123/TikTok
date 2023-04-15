@@ -1,0 +1,4 @@
+#Sat Apr 15 18:26:35 IST 2023
+base.0=/Users/anukanttechnologies/Developer/apps/tiktok/TikTok-1/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

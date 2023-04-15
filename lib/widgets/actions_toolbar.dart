@@ -49,7 +49,104 @@ class _ActionsToolbarState extends State<ActionsToolbar>
           children: [
             getFollowAction(profileUrl: ''),
             getSocialAction(icon: 'heart', title: '3.2m', style: style),
-            getSocialAction(icon: 'comment', title: '16.4k', style: style),
+            getSocialAction(
+              icon: 'comment',
+              title: '16.4k',
+              style: style,
+              onTap: () {
+                showBottomSheet(
+                  elevation: 0,
+                  shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(15),
+                          topRight: Radius.circular(15))),
+                  context: context,
+                  builder: (context) {
+                    return SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      height: MediaQuery.of(context).size.height * .6,
+                      child: Column(
+                        children: [
+                          AppBar(
+                            elevation: 0,
+                            backgroundColor: ColorUtils.transparent,
+                            automaticallyImplyLeading: false,
+                            title: TextWidget(
+                              text: '540 Comments',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyText1!
+                                  .copyWith(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w600,
+                                      color: ColorUtils.black),
+                            ),
+                            centerTitle: true,
+                            actions: [
+                              IconButton(
+                                  onPressed: () => Navigator.pop(context),
+                                  icon: const Icon(
+                                    Icons.close_rounded,
+                                    color: ColorUtils.black,
+                                    size: 20,
+                                  ))
+                            ],
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width,
+                            height: MediaQuery.of(context).size.height * .45,
+                          ),
+                          Align(
+                            alignment: Alignment.bottomLeft,
+                            child: Container(
+                              width: MediaQuery.of(context).size.width,
+                              height: MediaQuery.of(context).size.height * .07,
+                              padding: EdgeInsets.symmetric(horizontal: 10),
+                              child: Row(
+                                children: [
+                                  Expanded(
+                                    child: TextField(
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyText1!
+                                          .copyWith(
+                                              color: ColorUtils.black,
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.w400),
+                                      decoration: InputDecoration(
+                                        hintText: 'Add Comment',
+                                        contentPadding: const EdgeInsets.all(8),
+                                        border: InputBorder.none,
+                                        hintStyle: Theme.of(context)
+                                            .textTheme
+                                            .bodyText1!
+                                            .copyWith(
+                                                color: ColorUtils.textGrey,
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w400),
+                                      ),
+                                    ),
+                                  ),
+                                  Row(
+                                    children: [
+                                      Image.asset('assets/images/sign.png'),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Image.asset('assets/images/emoji.png')
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    );
+                  },
+                );
+              },
+            ),
             getSocialAction(icon: 'share', title: 'Share', style: style),
             getMusicPlayerAction(),
           ]),
@@ -57,19 +154,25 @@ class _ActionsToolbarState extends State<ActionsToolbar>
   }
 
   Widget getSocialAction(
-      {required String title, required String icon, required TextStyle style}) {
+      {required String title,
+      required String icon,
+      required TextStyle style,
+      VoidCallback? onTap}) {
     return Container(
       margin: const EdgeInsets.only(top: 15.0),
       width: 60.0,
       height: 60.0,
       child: Column(
         children: [
-          SvgPicture.asset(
-            'assets/images/$icon.svg',
-            width: 25,
-            height: 25,
+          InkWell(
+            onTap: onTap,
+            child: SvgPicture.asset(
+              'assets/images/$icon.svg',
+              width: 25,
+              height: 25,
+            ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           TextWidget(

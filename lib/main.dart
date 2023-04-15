@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tiktok/cubit/home_tab/cubit/tabs_cubit.dart';
-import 'package:tiktok/screens/album_page.dart';
 import 'package:tiktok/screens/dashboard.dart';
+import 'package:tiktok/screens/profile.dart';
 import 'package:tiktok/utils/colors.dart';
 
 void main() {
@@ -19,13 +19,13 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider<TabsCubit>(create: (_) => TabsCubit()),
       ],
-      child: MaterialApp(
+      child: const MaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-            textTheme: Theme.of(context).textTheme.apply(
-                bodyColor: ColorUtils.white, displayColor: ColorUtils.white)),
-        home: const AlbumPage(),
+        // theme: ThemeData(
+        //     textTheme: Theme.of(context).textTheme.apply(
+        //         bodyColor: ColorUtils.white, displayColor: ColorUtils.white)),
+        home: Dashboard(),
       ),
     );
   }

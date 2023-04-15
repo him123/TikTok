@@ -27,14 +27,11 @@ class _DashboardState extends State<Dashboard> {
     const Search(
       key: PageStorageKey('Page2'),
     ),
-    const AddPost(
+    const Inbox(
       key: PageStorageKey('Page3'),
     ),
-    const Inbox(
-      key: PageStorageKey('Page4'),
-    ),
     const Profile(
-      key: PageStorageKey('Page5'),
+      key: PageStorageKey('Page4'),
     )
   ];
 
